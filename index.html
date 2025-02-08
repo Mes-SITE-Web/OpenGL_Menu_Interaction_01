@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoke</title>
+    <!-- CSS  -->
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- CANVAS  -->
+    <canvas></canvas>
+    <!-- MENU  -->
+    <main>
+        <!-- VIDEOS  -->
+        <div class="card">
+            <pixel-canvas></pixel-canvas>
+
+            <svg id="Camera" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 256 256">
+                <path id="svgCamera"
+                    d="M3.58,119.82c1.49-8.11,2.51-16.34,4.55-24.32,4.92-19.22,14.27-36.14,28.08-51.32,20.99,36.24,41.75,72.1,62.85,108.54H6.07c-.85-5.53-1.67-10.91-2.5-16.29,0-5.54,0-11.07,0-16.61ZM120.95,3.55c-10.78,2.22-21.76,3.75-32.29,6.81-14.41,4.19-27.3,11.63-39.04,21.48,15.2,26.17,30.2,52,45.64,78.58,20.14-34.88,39.8-68.92,59.82-103.58-7.12-1.19-13.43-2.24-19.73-3.29-4.8,0-9.6,0-14.4,0ZM250.25,103.51h-92.75c20.95,36.31,41.63,72.14,62.7,108.66,27.64-31.95,36.93-68.05,30.05-108.66ZM127.26,90.55h119.39c-13.32-37.4-37.7-63.29-74.4-78.29-15.1,26.28-29.93,52.08-44.99,78.29ZM101.6,248.87c32.09,9.34,77.52.2,104.86-24.8-14.91-25.7-29.86-51.46-45.1-77.73-20.12,34.52-39.91,68.48-59.76,102.53ZM84.44,243.84c14.83-25.59,29.72-51.27,44.96-77.55H10.23c9.99,35.88,43.01,68.27,74.2,77.55Z" />
+            </svg>
+            <button>Vidéos</buton>
+        </div>
+
+        <!-- MUSIQUE  -->
+        <div class="card" style="--active-color: #e0f2fe">
+            <pixel-canvas data-gap="10" data-speed="25" data-colors="#e0f2fe, #7dd3fc, #0ea5e9"></pixel-canvas>
+
+            <svg id="Musique" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 256 256">
+                <path id="svgMusique"
+                    d="M128,3.55C59.38,3.55,3.55,59.38,3.55,128s55.83,124.45,124.45,124.45,124.45-55.83,124.45-124.45S196.62,3.55,128,3.55ZM128,22.7c58.06,0,105.3,47.24,105.3,105.3s-47.24,105.3-105.3,105.3S22.7,186.06,22.7,128,69.94,22.7,128,22.7ZM129.22,60.99c-2.52,0-4.61,1.97-4.77,4.49l-3.37,52.48-2.99-43.68c-.18-2.52-2.27-4.45-4.79-4.45s-4.59,1.94-4.77,4.45l-3.01,43.1-2.8-34.33c-.21-2.47-2.27-4.37-4.75-4.39h-.04c-2.47,0-4.54,1.88-4.77,4.34l-4.36,45.02-1.79-10.08c-.35-1.96-1.9-3.5-3.87-3.85-2-.32-3.97.54-4.97,2.26l-6.84,11.65h-19.91v9.57h22.64c1.69,0,3.29-.9,4.13-2.36l1.68-2.88,5.67,31.49c.43,2.35,2.65,3.98,4.9,3.95,2.38-.11,4.35-1.95,4.58-4.34l2.52-26.12,3.57,43.73c.21,2.49,2.3,4.39,4.79,4.39h.02c2.51-.02,4.57-1.95,4.75-4.45l2.6-37.21,3.22,46.76c.17,2.52,2.27,4.47,4.79,4.47h.02c2.53,0,4.61-1.97,4.77-4.49l3.01-47.17,2.24,37.58c.14,2.5,2.19,4.47,4.69,4.51h.07c2.47,0,4.54-1.88,4.77-4.36l3.33-36.91,2.49,36.8c.17,2.49,2.23,4.44,4.73,4.47h.06c2.47,0,4.54-1.87,4.77-4.34l4.38-47.01,2.84,20.7c.29,2.13,1.97,3.81,4.09,4.09,2.19.26,4.18-.86,5.03-2.82l8.08-18.49h23.95v-9.57h-27.09c-1.91,0-3.61,1.14-4.38,2.88l-2.52,5.76-6.19-45.01c-.33-2.41-2.38-4.04-4.84-4.13-2.43.06-4.43,1.93-4.66,4.36l-2.71,29.11-2.56-37.84c-.16-2.49-2.23-4.44-4.73-4.47-2.65-.11-4.6,1.87-4.82,4.36l-3.03,33.66-3.05-51.18c-.15-2.53-2.24-4.5-4.77-4.51h-.02Z" />
+            </svg>
+            <button>Musique</buton>
+        </div>
+
+        <!-- FICHIER  -->
+        <div class="card" style="--active-color: #fef08a">
+            <pixel-canvas data-gap="3" data-speed="20" data-colors="#fef08a, #fde047, #eab308"></pixel-canvas>
+            <svg id="Dossier" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 256 256">
+                <path id="svgDossier"
+                    d="M128,251.5c-67.88.04-123.42-55.37-123.51-123.23C4.4,60.07,59.78,4.58,128,4.5c67.97-.07,123.54,55.49,123.51,123.49-.03,68.07-55.42,123.45-123.51,123.5ZM127.93,241.54c62.54.09,113.56-50.82,113.63-113.4.08-62.6-50.7-113.52-113.35-113.67-62.57-.15-113.6,50.65-113.77,113.26-.17,62.67,50.74,113.72,113.49,113.82ZM127.91,231.67c-57.32-.16-103.58-46.4-103.6-103.56-.02-57.44,46.64-104.04,103.91-103.77,57.38.26,103.5,46.48,103.47,103.68-.03,57.33-46.56,103.8-103.78,103.65ZM187.31,108.28c0-4.01.03-7.7,0-11.39-.06-6.85-4.07-10.82-10.94-10.83-10.52-.02-21.04-.02-31.56,0-7.8.02-14.25-2.87-19.34-8.78-4.9-5.7-11.18-8.52-18.64-8.56-11.4-.07-22.81-.03-34.21-.02-7.32.01-11.31,4.01-11.32,11.32-.01,8.31,0,16.62,0,24.92,0,22.18-.03,44.37.01,66.55.02,9.76,6.17,15.82,15.88,15.82,30.94,0,61.88,0,92.82,0,10.47,0,18.64-5.73,22.28-15.6,2.94-7.95,5.88-15.89,8.81-23.83,3.14-8.53,6.35-17.03,9.39-25.6,2.83-7.98-1.25-13.78-9.7-13.98-1.77-.04-3.54-.02-5.3-.02-2.63,0-5.25,0-8.16,0ZM71.36,154.25c.55-.57.78-1.2,1.01-1.83,3.32-9.4,6.65-18.79,9.97-28.19,3.69-10.45,11.39-15.95,22.41-15.95,23.07,0,46.14,0,69.21,0,1.04,0,2.07,0,3.26,0v-12.41c-1.02,0-1.97,0-2.92,0-9.37,0-18.74-.17-28.11.04-11.63.26-21.18-3.84-28.7-12.73-2.33-2.75-5.48-4.42-9.02-4.47-12.28-.16-24.56-.06-37.12-.06v75.59Z" />
+            </svg>
+            <button>Fichiers</buton>
+        </div>
+        <!-- 3D  -->
+        <div class="card" style="--active-color: #fecdd3">
+            <pixel-canvas data-gap="6" data-speed="80" data-colors="#fecdd3, #fda4af, #e11d48"
+                data-no-focus></pixel-canvas>
+            <svg id="_x33_D" xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 256 256">
+                <path id="svg3D"
+                    d="M121.83,246.39c-14.42-12.4-28.17-27.47-42.06-41.34-23.54-23.53-46.96-47.14-70.32-70.79-6.57-6.65-6.62-9.94-.13-16.51,19.74-19.96,39.69-39.77,59.49-59.69,15.78-15.88,31.53-31.78,47.17-47.75,7.11-7.27,15.69-7.88,22.63-.93,36.11,36.17,72.13,72.4,108.09,108.67,6.18,6.24,6.16,9.71-.19,16.13-19.74,19.96-39.67,39.79-59.48,59.69-15.67,15.74-30.31,32.18-46.06,47.87-2.28,2.27-5.32,5.39-8.55,6.31-3.56,1.01-7.78.75-10.58-1.66ZM164.18,126.4c-24.09-.07-48.19-.13-72.27-.2-.61,0-1.03-.6-.84-1.17,8.79-26.27,17.59-52.54,26.38-78.81l-3.11-1.92L34.45,124.5c-.56.56-.16,1.52.63,1.52h55.23c.35,0,.67.21.81.53,11.77,26.54,23.55,53.08,35.77,80.62.29.66,1.22.71,1.59.09.87-1.48,1.48-2.47,1.94-3.5,5.84-13.1,11.57-26.22,17.45-39.31,5.65-12.57,11.44-25.1,17.16-37.66.14-.32.46-.52.81-.52h55.12c.79,0,1.19-.96.63-1.52-28.07-28.19-54.93-55.16-81.76-82.1-.64-.64-1.72-.03-1.5.84,2.67,10.56,6.01,20.83,9.46,31.08,5.7,16.9,11.49,33.77,17.25,50.65.2.58-.23,1.18-.85,1.18Z" />
+            </svg>
+            <button>3D</buton>
+        </div>
+    </main>
+
+    <!-- SCRIPT CANVAS OPENGL  -->
+
+    <script type="x-shader/x-fragment" id="vertShader">
+        precision highp float;
+    
+        varying vec2 vUv;
+        attribute vec2 a_position;
+    
+        varying vec2 vL;
+        varying vec2 vR;
+        varying vec2 vT;
+        varying vec2 vB;
+        uniform vec2 u_texel;
+    
+        void main () {
+            vUv = .5 * (a_position + 1.);
+            vL = vUv - vec2(u_texel.x, 0.);
+            vR = vUv + vec2(u_texel.x, 0.);
+            vT = vUv + vec2(0., u_texel.y);
+            vB = vUv - vec2(0., u_texel.y);
+            gl_Position = vec4(a_position, 0., 1.);
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderAdvection">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying vec2 vUv;
+        uniform sampler2D u_velocity_texture;
+        uniform sampler2D u_input_texture;
+        uniform vec2 u_texel;
+        uniform float u_dt;
+        uniform float u_use_text;
+        uniform sampler2D u_text_texture;
+    
+        vec4 bilerp (sampler2D sam, vec2 uv, vec2 tsize) {
+            vec2 st = uv / tsize - 0.5;
+    
+            vec2 iuv = floor(st);
+            vec2 fuv = fract(st);
+    
+            vec4 a = texture2D(sam, (iuv + vec2(0.5, 0.5)) * tsize);
+            vec4 b = texture2D(sam, (iuv + vec2(1.5, 0.5)) * tsize);
+            vec4 c = texture2D(sam, (iuv + vec2(0.5, 1.5)) * tsize);
+            vec4 d = texture2D(sam, (iuv + vec2(1.5, 1.5)) * tsize);
+    
+            return mix(mix(a, b, fuv.x), mix(c, d, fuv.x), fuv.y);
+        }
+    
+        void main () {
+            vec2 coord = vUv - u_dt * bilerp(u_velocity_texture, vUv, u_texel).xy * u_texel;
+            float text = texture2D(u_text_texture, vec2(vUv.x, 1. - vUv.y)).r;
+            float dissipation = (.96 + text * .04 * u_use_text);
+    
+            gl_FragColor = dissipation * bilerp(u_input_texture, coord, u_texel);
+            gl_FragColor.a = 1.;
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderDivergence">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying highp vec2 vUv;
+        varying highp vec2 vL;
+        varying highp vec2 vR;
+        varying highp vec2 vT;
+        varying highp vec2 vB;
+        uniform sampler2D u_velocity_texture;
+    
+        void main () {
+            float L = texture2D(u_velocity_texture, vL).x;
+            float R = texture2D(u_velocity_texture, vR).x;
+            float T = texture2D(u_velocity_texture, vT).y;
+            float B = texture2D(u_velocity_texture, vB).y;
+    
+            float div = .6 * (R - L + T - B);
+            gl_FragColor = vec4(div, 0., 0., 1.);
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderPressure">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying highp vec2 vUv;
+        varying highp vec2 vL;
+        varying highp vec2 vR;
+        varying highp vec2 vT;
+        varying highp vec2 vB;
+        uniform sampler2D u_pressure_texture;
+        uniform sampler2D u_divergence_texture;
+        uniform sampler2D u_text_texture;
+    
+        void main () {
+    
+            float text = texture2D(u_text_texture, vec2(vUv.x, 1. - vUv.y)).r;
+    
+            float L = texture2D(u_pressure_texture, vL).x;
+            float R = texture2D(u_pressure_texture, vR).x;
+            float T = texture2D(u_pressure_texture, vT).x;
+            float B = texture2D(u_pressure_texture, vB).x;
+            float C = texture2D(u_pressure_texture, vUv).x;
+            float divergence = texture2D(u_divergence_texture, vUv).x;
+    
+            float pressure = (L + R + B + T - divergence) * 0.25;
+            pressure += (.2 * text);
+    
+            gl_FragColor = vec4(pressure, 0., 0., 1.);
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderGradientSubtract">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying highp vec2 vUv;
+        varying highp vec2 vL;
+        varying highp vec2 vR;
+        varying highp vec2 vT;
+        varying highp vec2 vB;
+        uniform sampler2D u_pressure_texture;
+        uniform sampler2D u_velocity_texture;
+    
+        uniform sampler2D u_text_texture;
+    
+        void main () {
+            float L = texture2D(u_pressure_texture, vL).x;
+            float R = texture2D(u_pressure_texture, vR).x;
+            float T = texture2D(u_pressure_texture, vT).x;
+            float B = texture2D(u_pressure_texture, vB).x;
+            vec2 velocity = texture2D(u_velocity_texture, vUv).xy;
+            velocity.xy -= vec2(R - L, T - B);
+            gl_FragColor = vec4(velocity, 0., 1.);
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderPoint">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying vec2 vUv;
+        uniform sampler2D u_input_texture;
+        uniform float u_ratio;
+        uniform vec3 u_point_value;
+        uniform vec2 u_point;
+        uniform float u_point_size;
+    
+        uniform sampler2D u_text_texture;
+    
+    
+        void main () {
+            vec2 p = vUv - u_point.xy;
+            p.x *= u_ratio;
+            vec3 splat = pow(2., -dot(p, p) / u_point_size) * u_point_value;
+    
+            float text = texture2D(u_text_texture, vec2(vUv.x, 1. - vUv.y)).r;
+            splat *= (.7 + .2 * text);
+    
+            vec3 base = texture2D(u_input_texture, vUv).xyz;
+            gl_FragColor = vec4(base + splat, 1.);
+        }
+    </script>
+
+    <script type="x-shader/x-fragment" id="fragShaderOutputShader">
+        precision highp float;
+        precision highp sampler2D;
+    
+        varying vec2 vUv;
+        uniform sampler2D u_output_texture;
+        uniform sampler2D u_text_texture;
+    
+        void main () {
+            vec3 C = texture2D(u_output_texture, vUv).rgb;
+            float text = texture2D(u_text_texture, vec2(vUv.x, 1. - vUv.y)).r; 
+            // gl_FragColor = vec4(vec3(1.) - C, 1.);
+          gl_FragColor = vec4(C, 1.); // Utilise les couleurs normales sans inversion
+    
+        }
+    </script>
+
+    <!-- SCRIPT PATH  -->
+    <!-- <script src="./menu_script.js"></script> -->
+    <script type="module" src="./js/menu_script.js"></script>
+    <script type="module" src="./js/script_accueil.js"></script>
+
+</body>
+
+</html>
