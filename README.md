@@ -11,9 +11,8 @@
 | Vidéos | Audios | Fichiers | 3D |
 |-----------|-----------|-----------|-----------|
 | Vidéo 1 | Audio 1 | Fichier 1 | 3D 1 |
-|-----------|-----------|-----------|-----------|
 | Vidéo 2 | Audio 2 | Fichier 2 | 3D 2 |
-|-----------|-----------|-----------|-----------|
+
 
 ![Capture d’écran 08-02-2025 14 43 02](https://github.com/user-attachments/assets/6e59f583-5158-47bb-a0d8-d704209e7938)
 
