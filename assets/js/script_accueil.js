@@ -4,32 +4,44 @@ const canvasEl = document.querySelector("canvas");
 const textureEl = document.createElement("canvas");
 const textureCtx = textureEl.getContext("2d");
 
-const fontOptions = {
-  Arial: "Arial, sans-serif",
-  Verdana: "Verdana, sans-serif",
-  Tahoma: "Tahoma, sans-serif",
-  "Times New Roman": "Times New Roman, serif",
-  Georgia: "Georgia, serif",
-  Garamond: "Garamond, serif",
-  "Courier New": "Courier New, monospace",
-  "Brush Script MT": "Brush Script MT, cursive",
-};
+// const fontOptions = {
+//   Arial: "Arial, sans-serif",
+//   Verdana: "Verdana, sans-serif",
+//   Tahoma: "Tahoma, sans-serif",
+//   "Times New Roman": "Times New Roman, serif",
+//   Georgia: "Georgia, serif",
+//   Garamond: "Garamond, serif",
+//   "Courier New": "Courier New, monospace",
+//   "Brush Script MT": "Brush Script MT, cursive",
+// };
 
-// REGLAGES TEXTE
+// REGLAGES IMAGE PNG
 const params = {
-  fontName: "Verdana",
-  isBold: false,
-  fontSize: 200,
-  text: "AHP",
-  pointerSize: null,
   //   color: { r: 1, g: 0.0, b: 0.5 },  //   ROSE
   //   color: { r: 0, g: 0, b: 1 },  //   BLEU
   //   color: { r: 0.21, g: 0.52, b: 0.82 }, //   BLEU CLAIRE
-  color: { r: 0.898, g: 0.125, b: 0.125 }, //   BLEU FONCE
+  color: { r: 0.965, g: 0.949, b: 0.918 }, //   BLEU FONCE
   //   color: { r: 1, g: 1, b: 1 }, //   BLANC
   //   color: { r: 0, g: 0, b: 0 }, //   NOIR
   //   color: { r: 0.11, g: 0.29, b: 0.33 }, //   VERT FONCE
 };
+
+// REGLAGES TEXTE
+// const params = {
+//   fontName: "Verdana",
+//   isBold: false,
+//   fontSize: 200,
+//   text: "AHP",
+//   pointerSize: null,
+//   //   color: { r: 1, g: 0.0, b: 0.5 },  //   ROSE
+//   //   color: { r: 0, g: 0, b: 1 },  //   BLEU
+//   //   color: { r: 0.21, g: 0.52, b: 0.82 }, //   BLEU CLAIRE
+//   color: { r: 0.898, g: 0.125, b: 0.125 }, //   BLEU FONCE
+//   //   color: { r: 1, g: 1, b: 1 }, //   BLANC
+//   //   color: { r: 0, g: 0, b: 0 }, //   NOIR
+//   //   color: { r: 0.11, g: 0.29, b: 0.33 }, //   VERT FONCE
+// };
+
 const pointer = {
   x: 0,
   y: 0,
@@ -462,22 +474,32 @@ function updateMousePosition(eX, eY) {
   pointer.y = eY;
 }
 
-// CONTROL PARAMETRE
+// CONTROL PARAMETRE IMAGE PNG
 function createControls() {
   const gui = new GUI();
-  gui.hide(); // Cache le GUI
+  // gui.hide(); // Cache le GUI
 
   gui.close();
-
-  gui.add(params, "text").onChange(updateTextCanvas);
-  gui
-    .add(params, "fontSize", 10, 300)
-    .onChange(updateTextCanvas)
-    .name("font size, px");
-  gui.add(params, "isBold").onChange(updateTextCanvas).name("bold");
-  gui
-    .add(params, "fontName", Object.keys(fontOptions))
-    .onChange(updateTextCanvas)
-    .name("font");
   gui.addColor(params, "color");
 }
+
+// CONTROL PARAMETRE TEXTE
+
+// function createControls() {
+//   const gui = new GUI();
+//   gui.hide(); // Cache le GUI
+
+//   gui.close();
+
+//   gui.add(params, "text").onChange(updateTextCanvas);
+//   gui
+//     .add(params, "fontSize", 10, 300)
+//     .onChange(updateTextCanvas)
+//     .name("font size, px");
+//   gui.add(params, "isBold").onChange(updateTextCanvas).name("bold");
+//   gui
+//     .add(params, "fontName", Object.keys(fontOptions))
+//     .onChange(updateTextCanvas)
+//     .name("font");
+//   gui.addColor(params, "color");
+// }
