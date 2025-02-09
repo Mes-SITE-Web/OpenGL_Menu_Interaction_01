@@ -1,3 +1,5 @@
+
+
 class Pixel {
   constructor(canvas, context, x, y, color, speed, delay) {
     this.width = canvas.width;
