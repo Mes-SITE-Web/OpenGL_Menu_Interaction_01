@@ -477,7 +477,7 @@ function updateMousePosition(eX, eY) {
 // CONTROL PARAMETRE IMAGE PNG
 function createControls() {
   const gui = new GUI();
-  // gui.hide(); // Cache le GUI
+  gui.hide(); // Cache le GUI
 
   gui.close();
   gui.addColor(params, "color");
