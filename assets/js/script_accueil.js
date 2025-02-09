@@ -4,6 +4,8 @@ const canvasEl = document.querySelector("canvas");
 const textureEl = document.createElement("canvas");
 const textureCtx = textureEl.getContext("2d");
 
+
+
 // const fontOptions = {
 //   Arial: "Arial, sans-serif",
 //   Verdana: "Verdana, sans-serif",
