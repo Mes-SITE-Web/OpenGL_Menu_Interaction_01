@@ -21,27 +21,9 @@ html {
 /* Gradient background */
 body {
     /* background: linear-gradient(135deg, #ff7eb3, #8e44ad); */
-    background: none;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* GRAINS  */
-/* Container for grain effect */
-.grain-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    /* Allows clicks through the grain overlay */
-    overflow: hidden;
-}
-
-/* SVG styles */
-.grain-overlay svg {
-    width: 100%;
-    height: 100%;
-}
