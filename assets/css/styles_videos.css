@@ -1,13 +1,12 @@
-/* body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100vw;
-    box-sizing: border-box;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap");
+
+:root {
+    --shiny-cta-bg: #000000;
+    --shiny-cta-bg-subtle: #1a1818;
+    --shiny-cta-fg: #ffffff;
+    --shiny-cta-highlight: blue;
+    --shiny-cta-highlight-subtle: #8484ff;
+}
 
 /* Reset */
 body,
@@ -21,9 +20,328 @@ html {
 /* Gradient background */
 body {
     /* background: linear-gradient(135deg, #ff7eb3, #8e44ad); */
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
+
+/* BOUTN ACCUEIL  */
+
+
+
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --gradient-angle-offset {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --gradient-percent {
+    syntax: "<percentage>";
+    initial-value: 5%;
+    inherits: false;
+}
+
+@property --gradient-shine {
+    syntax: "<color>";
+    initial-value: white;
+    inherits: false;
+}
+
+.shiny-cta {
+    --animation: gradient-angle linear infinite;
+    --duration: 3s;
+    --shadow-size: 2px;
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline-offset: 4px;
+    padding: 1.25rem 2.5rem;
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    border-radius: 360px;
+    color: var(--shiny-cta-fg);
+    background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg)) padding-box,
+        conic-gradient(from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+            transparent,
+            var(--shiny-cta-highlight) var(--gradient-percent),
+            var(--gradient-shine) calc(var(--gradient-percent) * 2),
+            var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+            transparent calc(var(--gradient-percent) * 4)) border-box;
+    box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+
+    &::before,
+    &::after,
+    span::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        inset-inline-start: 50%;
+        inset-block-start: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+    }
+
+    &:active {
+        translate: 0 1px;
+    }
+}
+
+/* Dots pattern */
+.shiny-cta::before {
+    --size: calc(100% - var(--shadow-size) * 3);
+    --position: 2px;
+    --space: calc(var(--position) * 2);
+    width: var(--size);
+    height: var(--size);
+    background: radial-gradient(circle at var(--position) var(--position),
+            white calc(var(--position) / 4),
+            transparent 0) padding-box;
+    background-size: var(--space) var(--space);
+    background-repeat: space;
+    mask-image: conic-gradient(from calc(var(--gradient-angle) + 45deg),
+            black,
+            transparent 10% 90%,
+            black);
+    border-radius: inherit;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Inner shimmer */
+.shiny-cta::after {
+    --animation: shimmer linear infinite;
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(-50deg,
+            transparent,
+            var(--shiny-cta-highlight),
+            transparent);
+    mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+    opacity: 0.6;
+}
+
+.shiny-cta span {
+    z-index: 1;
+
+    &::before {
+        --size: calc(100% + 1rem);
+        width: var(--size);
+        height: var(--size);
+        box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+        opacity: 0;
+    }
+}
+
+/* Animate */
+.shiny-cta {
+    --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+    transition: var(--transition);
+    transition-property: --gradient-angle-offset, --gradient-percent,
+        --gradient-shine;
+
+    &,
+    &::before,
+    &::after {
+        animation: var(--animation) var(--duration),
+            var(--animation) calc(var(--duration) / 0.4) reverse paused;
+        animation-composition: add;
+    }
+
+    span::before {
+        transition: opacity var(--transition);
+        animation: calc(var(--duration) * 1.5) breathe linear infinite;
+    }
+}
+
+.shiny-cta:is(:hover, :focus-visible) {
+    --gradient-percent: 20%;
+    --gradient-angle-offset: 95deg;
+    --gradient-shine: var(--shiny-cta-highlight-subtle);
+
+    &,
+    &::before,
+    &::after {
+        animation-play-state: running;
+    }
+
+    span::before {
+        opacity: 1;
+    }
+}
+
+@keyframes gradient-angle {
+    to {
+        --gradient-angle: 360deg;
+    }
+}
+
+@keyframes shimmer {
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes breathe {
+
+    from,
+    to {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+}
+
+
+
+
+/* BOUTON ACCUEIL  */
+
+:root {
+    --space: 1rem;
+    --bg: #09090b;
+    --fg: #e3e3e3;
+    --surface-1: #101012;
+    --surface-2: #27272a;
+    --surface-3: #52525b;
+    --ease-out: cubic-bezier(0.5, 1, 0.89, 1);
+    --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+height,
+body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    color: var(--fg);
+    background: var(--bg);
+    padding: var(--space);
+    min-height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(var(--count, 1), 1fr);
+    gap: var(--space);
+    margin: auto;
+    inline-size: min(var(--max, 15rem), 100%);
+
+    @media (min-width: 25rem) {
+        --count: 2;
+        --max: 30rem;
+    }
+
+    @media (min-width: 45rem) {
+        --count: 4;
+        --max: 60rem;
+    }
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "card";
+    place-items: center;
+    aspect-ratio: 1/1;
+    border: 1px solid var(--surface-2);
+    border-radius: 3px;
+    isolation: isolate;
+    transition: border-color 200ms var(--ease-out);
+    user-select: none;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at bottom left,
+                transparent 55%,
+                var(--surface-1));
+        pointer-events: none;
+        box-shadow: var(--bg) -0.5cqi 0.5cqi 2.5cqi inset;
+        transition: opacity 900ms var(--ease-out);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        aspect-ratio: 1;
+        background: radial-gradient(circle, var(--bg), transparent 65%);
+        opacity: 0;
+        transition: opacity 800ms var(--ease-out);
+    }
+
+    >* {
+        grid-area: card;
+    }
+
+    svg {
+        position: relative;
+        z-index: 1;
+        width: 30%;
+        height: auto;
+        color: var(--surface-3);
+        transition: 300ms var(--ease-out);
+        transition-property: color, scale;
+    }
+
+    button {
+        opacity: 0;
+    }
+
+    &:focus-within {
+        outline: 5px auto Highlight;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    &:where(:hover, :focus-within) {
+        border-color: var(--active-color, var(--fg));
+        transition: border-color 800ms var(--ease-in-out);
+    }
+
+    &:where(:hover, :focus-within) svg {
+        color: var(--active-color, var(--fg));
+        scale: 1.1;
+        transition: 300ms var(--ease-in-out);
+    }
+
+    &:where(:hover, :focus-within)::before {
+        opacity: 0;
+    }
+
+    &:where(:hover, :focus-within)::after {
+        opacity: 1;
+    }
+}

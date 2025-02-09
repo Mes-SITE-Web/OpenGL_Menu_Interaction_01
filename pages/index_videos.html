@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page_01_Videos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- CSS  -->
+    <link rel="stylesheet" href="../navbar.css">
     <link rel="stylesheet" href="../assets/css/grain_anim.css">
     <link rel="stylesheet" href="../assets/css/styles_videos.css">
 </head>
@@ -25,13 +27,55 @@
             <rect width="100%" height="100%" filter="url(#grain)" />
         </svg>
     </div>
-
     <!-- TITRE  -->
-    <h1 style="color: aliceblue;">PAGE 01 (Vidéos)</h1>
+    <div id="content">
+        <h1 style="color: aliceblue;">PAGE 01 (Vidéos)</h1>
+    </div>
+    <!-- NAVBAR  -->
+    <nav class="nav-container">
+        <button class="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>ACCUEIL</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./pages/index_musique.html" class="nav-link">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>VIDEOS</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./pages/index_fichier.html" class="nav-link">
+                    <i class="fa-solid fa-microphone-lines"></i>
+
+                    <span>AUDIOS</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="./pages/index_3D.html" class="nav-link">
+                    <i class="fa-regular fa-folder-open"></i>
+                    <span>3D</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+
+
 
 
     <!-- SCRIPT  -->
-    <script src="../assets/js/script_videos.js"></script>
+    <script src="/navbar.js"></script>
+    <script src="../assets/js/grain_anim.js"></script>
 </body>
 
 </html>
