@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page_01_Videos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- CSS  -->
     <!-- anime  -->
     <link rel="stylesheet" href="../assets/css/anime.css">
     <!-- css import  -->
-    <link rel="stylesheet" href="../navbar.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+     <link rel="stylesheet" href="../assets/navbar/normalize.css">
+    <link rel="stylesheet" href="../assets/navbar/navbar.css">
     <link rel="stylesheet" href="../assets/css/grain_anim.css">
     <link rel="stylesheet" href="../assets/css/styles_videos.css">
 </head>
@@ -35,38 +37,23 @@
         <h1 style="color: aliceblue;">PAGE 01 (Vidéos)</h1>
     </div>
     <!-- NAVBAR  -->
-    <nav class="nav-container">
-        <button class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <ul class="nav-links">
-            <li class="nav-item">
-                <a href="../index.html" class="nav-link">
-                    <i class="fas fa-home"></i>
-                    <span>ACCUEIL</span>
-                </a>
+    <nav class="navbar">
+        <ul class="navbar__menu">
+            <!-- ACCUEIL  -->
+            <li class="navbar__item">
+                <a href="../index.html" class="navbar__link"><i data-feather="home"></i><span>Accueil</span></a>
             </li>
-            <li class="nav-item">
-                <a href="./pages/index_musique.html" class="nav-link">
-                    <i class="fa-solid fa-camera"></i>
-                    <span>VIDEOS</span>
-                </a>
+            <!-- AUDIOS  -->
+            <li class="navbar__item">
+                <a href="../pages/index_musique.html" class="navbar__link"><i data-feather="play-circle"></i><span>Audios</span></a>
             </li>
-            <li class="nav-item">
-                <a href="./pages/index_fichier.html" class="nav-link">
-                    <i class="fa-solid fa-microphone-lines"></i>
-
-                    <span>AUDIOS</span>
-                </a>
+            <!-- FICHIERS  -->
+            <li class="navbar__item">
+                <a href="../pages/index_fichier.html" class="navbar__link"><i data-feather="folder"></i><span>Fichiers</span></a>
             </li>
-            <li class="nav-item">
-                <a href="./pages/index_3D.html" class="nav-link">
-                    <i class="fa-regular fa-folder-open"></i>
-                    <span>3D</span>
-                </a>
+            <!-- 3D  -->
+            <li class="navbar__item">
+                <a href="../pages/index_3D.html" class="navbar__link"><i data-feather="box"></i><span>3D</span></a>
             </li>
         </ul>
     </nav>
@@ -75,7 +62,7 @@
     <!-- anime  -->
     <script src="../assets/js/anime.js"></script>
     <!-- script import  -->
-    <script src="../navbar.js"></script>
+    <script src="../assets/navbar/navbar.js"></script>
     <script src="../assets/js/grain_anim.js"></script>
 </body>
 
